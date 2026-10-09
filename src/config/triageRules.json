@@ -1,0 +1,56 @@
+{
+  "notice": "REQUIRES CLINICIAN REVIEW - Generic Emergency Triage Rules Config. Do NOT alter clinical threshold rules without formal medical director approval.",
+  "version": "1.0.0",
+  "triageCategories": ["RED", "YELLOW"],
+  "redFlagRules": [
+    {
+      "id": "unresponsive_gcs",
+      "name": "Unresponsive or Low GCS (< 13)",
+      "description": "Patient is unresponsive, unarousable, or has Glasgow Coma Scale less than 13.",
+      "category": "RED"
+    },
+    {
+      "id": "severe_bleeding",
+      "name": "Severe / Uncontrolled Bleeding",
+      "description": "Active major arterial bleeding, uncontrolled hemorrhage, or severe blood loss.",
+      "category": "RED"
+    },
+    {
+      "id": "chest_pain_sweating",
+      "name": "Chest Pain with Sweating / Diaphoresis",
+      "description": "Acute retrosternal chest pain accompanied by cold sweating, clamminess, or radiation.",
+      "category": "RED"
+    },
+    {
+      "id": "stroke_fast_face",
+      "name": "Stroke Sign: Facial Droop",
+      "description": "Sudden facial asymmetry or mouth drooping (FAST rule).",
+      "category": "RED"
+    },
+    {
+      "id": "stroke_fast_arm",
+      "name": "Stroke Sign: Arm / Leg Weakness",
+      "description": "Sudden arm drift or unilateral extremity weakness (FAST rule).",
+      "category": "RED"
+    },
+    {
+      "id": "stroke_fast_speech",
+      "name": "Stroke Sign: Speech Difficulty",
+      "description": "Sudden speech slurring, dysphasia, or inability to speak (FAST rule).",
+      "category": "RED"
+    },
+    {
+      "id": "major_trauma",
+      "name": "Major Trauma Mechanism",
+      "description": "High-speed road traffic accident, fall from height (> 10 feet), penetrating trauma, or crush injury.",
+      "category": "RED"
+    },
+    {
+      "id": "severe_respiratory_distress",
+      "name": "Severe Respiratory Distress (SpO2 < 90%)",
+      "description": "Oxygen saturation below 90% or severe respiratory effort.",
+      "category": "RED"
+    }
+  ],
+  "defaultCategory": "YELLOW"
+}

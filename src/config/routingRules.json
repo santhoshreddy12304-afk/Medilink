@@ -1,0 +1,27 @@
+{
+  "_comment": "REQUIRES CLINICIAN REVIEW - Deterministic Hospital Ranking & Capability Matching Weights",
+  "version": "1.0.0",
+  "lastReviewed": "2026-10-09",
+  "weights": {
+    "etaWeight": 0.50,
+    "hospitalLoadWeight": 0.30,
+    "capabilityFitWeight": 0.20
+  },
+  "rerouteThresholds": {
+    "minimumEtaImprovementPercent": 20,
+    "minimumEtaImprovementMinutes": 2.0,
+    "recomputeIntervalSeconds": 45
+  },
+  "cacheAndRateLimits": {
+    "routeCacheTtlSeconds": 30,
+    "dailyRequestCap": 2000,
+    "maxRouteRequestsPerCase": 100
+  },
+  "capabilityRequirements": {
+    "STEMI": ["cathLabAvailable"],
+    "STROKE": ["strokeCenter", "ctAvailable"],
+    "MAJOR_TRAUMA": ["traumaLevel1or2", "ctAvailable", "icuAvailable"],
+    "SEVERE_BURNS": ["burnUnit"],
+    "CRITICAL_CARE": ["icuAvailable"]
+  }
+}
